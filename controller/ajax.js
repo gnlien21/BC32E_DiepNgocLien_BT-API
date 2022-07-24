@@ -117,7 +117,7 @@ document.querySelector('#btnUpdate').onclick = function(){
     spUpdate.type = document.querySelector('#productType').value;
 
     var promise = axios({
-        url:'http://svcy.myclass.vn/api/Product/UpdateProduct'+spUpdate.id,
+        url:'http://svcy.myclass.vn/api/Product/UpdateProduct/'+spUpdate.id,
         method: 'PUT',
         data: spUpdate
     });
