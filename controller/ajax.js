@@ -130,3 +130,25 @@ document.querySelector('#btnUpdate').onclick = function(){
         console.log(error);
     });
 }
+
+
+//SearchByName
+
+document.querySelector('#btnSearch').onclick = function(){
+    var searchContent = document.querySelector('#inputSearch').value;
+
+    var promise = axios({
+        url: 'http://svcy.myclass.vn/api/Product/SearchByName?name='+searchContent,
+        method: 'GET',
+        data: searchContent,
+    });
+
+    promise.then(function(result){
+        renderDSSanPham(result.data);
+    });
+
+    promise.catch(function(error){
+        console.log(error);
+    });
+
+}

@@ -4,3 +4,7 @@
     box-sizing: border-box;
 }
 
+.header .form-group{
+    align-items: center;
+    justify-content:center;
+}
