@@ -6,15 +6,19 @@ function renderDSSanPham (arrSanPham){
 
             <tr>
             <td>${sp.id}</td>
-            <td>${sp.img}</td>
+            <td><img src="${sp.img}"  width="150" height="150"/></td>
             <td>${sp.name}</td>
             <td>${sp.price}</td>
             <td>${sp.description}</td>
             <td>${sp.type}</td>
-            <button class="btn btn-danger" id="btnXoa"><i class="fa-solid fa-trash-can"></i></button>
-            <button class="btn btn-primary" id="btnChinhSua"> <i class="fa-solid fa-pen-to-square"></i></button>
+            <td><button class="btn btn-danger" id="btnXoa" onclick="xoaSanPham('${sp.id}')">Xóa</button></td>
+            <td><button class="btn btn-primary" id="btnChinhSua" onclick="editSanPham('${sp.id}')">Sửa</button></td>
             </tr>
         `;
     }
     document.querySelector('#tblSanPham').innerHTML = html;
 }
+
+//<i class="fa-solid fa-trash-can"></i>
+//<i class="fa-solid fa-pen-to-square"></i>
+
